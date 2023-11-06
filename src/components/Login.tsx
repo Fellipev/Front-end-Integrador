@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import axios from 'axios';
 
 
 function Login() {
+
+    interface userRequest {
+        email : string;
+        senha : string;
+    }
+
     const navigate = useNavigate();
     const [loginData, setLoginData] = useState({
         email : '',
@@ -17,8 +23,24 @@ function Login() {
 
     const fazerLogin = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        console.log("Email: " + loginData.email)
-        console.log("Senha: " + loginData.senha)
+        console.log("LoginData: " + JSON.stringify(loginData))
+        axios.post<boolean>('http://localhost:8080/usuario/verificarUsuario', JSON.stringify(loginData), {
+            headers: { 'Content-Type' : 'application/json' }
+        })
+            .then(response => {
+                const isVerified: boolean = response.data;
+
+                if(isVerified) {
+                    console.log('Dados validos!');
+                    navigate('/index');
+                } else {
+                    console.log('Dados invalidos!');
+                }
+            })
+            .catch(error => {
+                console.error('Erro na requisição: ', error);
+            });
+
     }
 
     return <div>
