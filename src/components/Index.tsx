@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useUserdData } from "../hooks/useUserData"
 import { UserData } from "../interface/UserData"
 import Cookie from "js-cookie";
@@ -11,7 +12,8 @@ function Index() {
 
     return <div>
         <h1>Está é a pagina main!</h1>
-        <button onClick={teste}>console</button>
+        <Link to={"/diario"}><button>Diário</button></Link>
+        {/* <button onClick={teste}>console</button> */}
     </div>
 }
 

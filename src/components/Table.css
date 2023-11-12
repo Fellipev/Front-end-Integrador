@@ -1,0 +1,12 @@
+.tabela {
+    font-size: 25px;
+    display: flex;
+    margin: 20px;
+    border: 3px solid white;
+    border-radius: 17px;
+}
+
+.tabela td {
+    padding: 20px;
+}
+

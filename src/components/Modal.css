@@ -1,0 +1,61 @@
+/* Adicione estilos ao seu modal */
+.ReactModal__Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ReactModal__Content {
+    position: relative;
+    padding: 20px;
+    background-color: #2e2c2c !important; /* Cor de fundo do modal */
+    border-radius: 8px;
+    max-width: 90%; /* Largura máxima do modal */
+    width: 100%;
+    outline: none; /* Remove a borda do foco */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+  }
+  
+  /* Adicione estilos ao conteúdo dentro do modal, se necessário */
+  .ReactModal__Content h2 {
+    color: #fffefe; /* Cor do título do modal */
+    text-align: center;
+  }
+  
+  .ReactModal__Content label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .ReactModal__Content input {
+    width: 500px;
+    padding: 8px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .ReactModal__Content button {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; /* Adiciona espaço acima do primeiro botão */
+  }
+  
+  /* Adicione mais estilos conforme necessário */
+  
+  /* Adicione transições suaves para animações, se desejado */
+  .ReactModal__Overlay,
+  .ReactModal__Content {
+    transition: opacity 0.3s ease-in-out;
+  }
