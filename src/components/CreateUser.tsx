@@ -20,7 +20,7 @@ function CreateUser() {
 
         console.log(JSON.stringify(formData));
 
-        fetch('http://localhost:8080/usuario', {
+        fetch('http://localhost:8080/usuario/create', {
            method: 'POST',
            headers: {
             'Content-Type': 'application/json',

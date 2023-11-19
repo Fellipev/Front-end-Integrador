@@ -3,6 +3,7 @@ import Login from './components/Login'
 import CreateUser from './components/CreateUser'
 import Index from './components/Index'
 import Diario from './components/Diario'
+import './components/News.css'
 import './App.css'
 
 function App() {
